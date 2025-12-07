@@ -1,0 +1,46 @@
+<header>
+  <div class="slider-container w-full h-[100vh] relative overflow-hidden bg-black">
+
+    @for (slide of slides; track $index) {
+      <div class="slice-wrapper" [attr.data-slide]="$index">
+
+        @for (s of [].constructor(slices); track $index) {
+          <div
+            class="slice"
+            #slice
+           [ngStyle]="{
+    'background-image': 'url(' + slide.image + ')',
+    'background-size': 'calc(100% * ' + slices + ') auto',
+    'background-position-x': 'calc((100% / (' + (slices - 1) + ')) * ' + $index + ')',
+    'left': 'calc((' + (100 / slices) + '%) * ' + $index + ')',
+    'width': 'calc(' + (100 / slices) + '% + 1px)'
+
+  }">
+          </div>
+        }
+
+      </div>
+    }
+
+    <div class="absolute w-full h-full top-0 left-0 flex justify-center items-end pb-10">
+      <div class="slide-text lg:w-[50%] md:w-[70%] sm:w-[80%] w-[90%] py-4">
+        <div class="badge md:text-[17px] text-[15px]">شركة رائدة في مجال المقاولات</div>
+
+        <h1 class="xl:text-[3.3rem] md:text-[2.7rem] sm:text-[2rem] text-[1.7rem]">{{ slides[currentIndex].title }}</h1>
+
+        <h2 class="xl:text-[2rem] md:text-[1.8rem] sm:text-[1.6rem] text-[1.4rem] py-2"
+         *ngIf="slides[currentIndex]?.subtitle" style="color: var(--primaryColor);">
+          {{ slides[currentIndex].subtitle }}
+        </h2>
+
+        <p class="md:text-[1.2rem] text-[1rem]">{{ slides[currentIndex].desc }}</p>
+
+        <div class="buttons mt-5 flex justify-center gap-[15px]">
+          <button style="background-color: var(--primaryColor);">خدماتنا</button>
+          <button>اتصل بنا</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>

@@ -1,0 +1,47 @@
+.slider-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.slice-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slice {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-size: auto 100%;
+  background-position-y: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-clip: padding-box;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+.slide-text {
+  background-color: var(--darkColor);
+  text-align: center;
+  color: var(--whiteColor);
+  .badge { background:var(--lightColor); 
+    color: var(--blackColor); 
+     padding: 6px 14px;
+     border-radius: 30px; display: inline-block; 
+     margin-bottom: 15px; 
+    }
+  button{
+    font-size: 17px;
+  }  
+}

@@ -1,1 +1,259 @@
 /* You can add global styles to this file, and also import other style files */
+@use "tailwindcss/base";
+@use "tailwindcss/components";
+@use "tailwindcss/utilities";
+:root{
+--primaryColor:rgb(234, 146, 22);
+--lightColor:#EEEEEE;
+--darkBlueColor:#3A4750;
+--darkColor:#313841;
+--whiteColor:white;
+--blackColor:black;
+--transition:0.4s;
+--borderColor:rgba(234, 146, 22,0.4);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  direction: rtl;
+  text-align: right;
+  font-family: "Cairo", sans-serif;
+  height: 2000px;
+}
+.main-margin{
+ max-width: 1700px;
+  margin: auto;
+}
+.main-padding{
+  max-width: 1700px;
+  margin: auto;
+}
+.padding-section{
+  width: 90%;
+  margin: auto;
+   @media screen and (max-width:1200px){
+     width: 95%;
+  }
+  @media screen and (max-width:600px){
+   width: 97%;
+  }
+}
+.margin-y-section{
+  margin: 50px auto;
+  @media screen and (max-width:600px){
+   margin: 30px auto;
+  }
+}
+.padding-y-section{
+  padding: 50px 10px;
+   @media screen and (max-width:1200px){
+     padding: 40px 10px;
+  }
+  @media screen and (max-width:600px){
+   padding: 30px 5px;
+  }
+}
+.main-margin-admin{
+  padding: 5px 50px;
+  @media screen and (max-width:1200px){
+    padding: 5px 30px;
+  }
+  @media screen and (max-width:600px){
+    padding: 5px 10px;
+  }
+}
+.main-padding-admin{
+  padding: 25px;
+  @media screen and (max-width:600px){
+   padding: 15px 10px;
+  }
+}
+.margin-y-admin{
+  margin:130px auto;
+  @media screen and (max-width:1200px){
+    margin:80px auto;
+  }
+  @media screen and (max-width:600px){
+  margin:50px auto;
+  }
+}
+img {
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+a{
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  color:var(--whiteColor);
+  display: block;
+  &:hover{
+  color: var(--primaryColor);
+}
+}
+// animations
+[appInView] {
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.7s ease-out, opacity 1s ease-out;
+}
+[appInView].show {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.from-bottom {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.6s ease;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.from-top {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 0.6s ease;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.from-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.6s ease;
+
+  &.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.from-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease;
+
+  &.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s ease;
+
+  &.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+i{
+  font-size: 1.2rem;
+  cursor: pointer;
+  @media screen and (max-width:800px){
+    font-size: 1rem;
+  }
+}
+p{
+  font-size: 1.2rem;
+    line-height: 1.8;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+  @media screen and (max-width:800px){
+    font-size: 1rem;
+  }  
+}
+.span-color{
+  color: var(--primaryColor);
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 ,label,span{
+    text-transform: capitalize;
+    @media screen and (max-width:700px){
+    font-size: 1.2rem;
+  }  
+}
+button{
+    z-index: 5;
+    border: none;
+    overflow: hidden;
+    padding: 12px 35px;
+    position: relative;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    color: var(--whiteColor);
+    text-transform: uppercase;
+    background-color: transparent;
+    font: {
+        size: 15px;
+        weight: 300;
+    };
+    &::before {
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        content: '';
+        height: 100%;
+        position: absolute;
+        transform: scaleX(0);
+        transition: var(--transition);
+        background: var(--primaryColor);
+    }
+    &::after {
+        top: 0;
+        left: 0;
+        content: '';
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: var(--transition);
+        border: 1px solid var(--primaryColor);
+        opacity: 0.6;
+    }
+    &:hover {
+        color: var(--whiteColor);
+        
+        &::before {
+            transform: scaleX(1);
+        }
+        &::after {
+            border-color: var(--primaryColor);
+            opacity: 0.8 !important;
+        }
+    }
+}
+.social-icons,.social-icons-sidebar{
+  div{
+    padding: 10px;
+     color: var(--whiteColor);
+    background-color: var(--blackColor);
+    margin: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var(--transition);
+    &:hover{
+      transform: translateY(-5px);
+      color: var(--primaryColor);
+    }
+  }
+}

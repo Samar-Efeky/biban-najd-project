@@ -1,0 +1,74 @@
+<nav class="w-full fixed top-0 left-0 z-50" [class.nav-scrolled]="scrolled">
+
+  <div class="main-padding flex items-center justify-between  ">
+
+    <!-- Logo -->
+    <div class="logo-item cursor-pointer"  routerLink="home" (click)="scrollToTop()">
+      <img src="assets/logo-image.jpg" class="w-[150px]" alt="image logo">
+    </div>
+
+    <!-- Menu -->
+    <ul class="gap-20 uppercase"
+        [class.sidebar-open]="sidebarOpen">
+
+      <li routerLink="home" routerLinkActive="active-link"
+          (click)="toggleSidebar(); scrollToTop()">
+        الصفحة الرئيسية
+      </li>
+
+      <li routerLink="about-us" routerLinkActive="active-link"
+          (click)="toggleSidebar(); scrollToTop()">
+        من نحن
+      </li>
+
+      <li routerLink="services" routerLinkActive="active-link"
+          (click)="toggleSidebar(); scrollToTop()">
+        الخدمات
+      </li>
+      <li routerLink="projects" routerLinkActive="active-link"
+          (click)="toggleSidebar(); scrollToTop()">
+        المشاريع
+      </li>
+
+      <li routerLink="contact-us" routerLinkActive="active-link"
+          (click)="toggleSidebar(); scrollToTop()">
+        تواصل معنا
+      </li>
+      <li>
+        <div class="social-icons-sidebar flex ">
+        <div>
+          <i class="fa-brands fa-facebook-f"></i>
+        </div>
+        <div>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div>
+           <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+
+      </li>
+    </ul>
+
+    <!-- Sidebar Icon -->
+    <div class="flex gap-[25px]">
+      <div class="social-icons  ">
+        <div>
+          <i class="fa-brands fa-facebook-f"></i>
+        </div>
+        <div>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div>
+           <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+
+      <div class="icon-sidebar py-1 px-3 mx-2 lg:hidden " (click)="toggleSidebar()">
+        <i class="fa-solid fa-bars" [class.hidden]="sidebarOpen"></i>
+        <i class="fa-solid fa-xmark" [class.hidden]="!sidebarOpen"></i>
+      </div>
+    </div>
+
+  </div>
+</nav>
