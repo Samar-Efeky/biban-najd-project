@@ -23,12 +23,12 @@
     }
 
     <div class="absolute w-full h-full top-0 left-0 flex justify-center items-end pb-10">
-      <div class="slide-text lg:w-[50%] md:w-[70%] sm:w-[80%] w-[90%] py-4">
+      <div class="slide-text lg:w-[50%] md:w-[70%] sm:w-[80%] w-[90%] md:py-4 py-2">
         <div class="badge md:text-[17px] text-[15px]">شركة رائدة في مجال المقاولات</div>
 
-        <h1 class="xl:text-[3.3rem] md:text-[2.7rem] sm:text-[2rem] text-[1.7rem]">{{ slides[currentIndex].title }}</h1>
+        <h1 class="xl:text-[3.3rem] md:text-[2.7rem] sm:text-[2rem] text-[1.6rem]">{{ slides[currentIndex].title }}</h1>
 
-        <h2 class="xl:text-[2rem] md:text-[1.8rem] sm:text-[1.6rem] text-[1.4rem] py-2"
+        <h2 class="xl:text-[2rem] md:text-[1.8rem] sm:text-[1.6rem] text-[1.3rem] py-2"
          *ngIf="slides[currentIndex]?.subtitle" style="color: var(--primaryColor);">
           {{ slides[currentIndex].subtitle }}
         </h2>
