@@ -8,7 +8,7 @@ nav {
   }
 }
 nav.nav-scrolled {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color:var(--darkBlueColor);
   color: var(--lightColor);
 }
 
@@ -67,7 +67,7 @@ ul li.active-link{
       transform: translateY(0px);
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1160px) {
   ul {
     width: 35%;
     border-top: 1px solid var(--borderColor);
@@ -88,6 +88,10 @@ ul li.active-link{
 
     li {
       padding: 5% 0;
+      &::after{
+        width: 0px;
+        height: 0px;
+      }
     }
 
     .sidebar-social,

@@ -1,0 +1,43 @@
+<div class="work-fields padding-y-section w-full">
+    <div class="padding-section">
+         <div class="title-design  relative px-4 sm:px-6 lg:px-8 py-10">
+  <header class="heading-hero mx-auto max-w-4xl text-center relative z-10 ">
+    <p class="heading-hero__eyebrow font-bold sm:text-[1.3rem] text-[1.1rem]">
+      ما يمكننا القيام به بالنسبة لك
+    </p>
+    <h1 class="heading-hero__title font-bold md:text-[2rem] text-[1.5rem] text-white">
+      مجالات عملنا
+    </h1>
+  </header>
+  <div class="heading-hero__background-word absolute inset-0 flex justify-center items-center pointer-events-none z-0">
+    <span class="text-[100px]  sm:text-[140px] font-extrabold  opacity-10 select-none">
+      خدمتنا
+    </span>
+  </div>
+ </div>
+ <section class="services-section ">
+  <div class="w-full  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
+  justify-center" >
+    @for(item of ourServices;track item.id){
+        <div class="single-services-box  p-2 relative bg-transparent overflow-hidden 
+        h-full flex flex-col justify-between zoom-in" appInView>
+      <div class="icon text-[50px] text-center mb-2 mt-[-10px]">
+        <i class="{{item.icon}} text-[50px]"></i>
+      </div>
+      <h3 class="text-center md:text-[22px] text-[18px] font-bold mb-4">{{item.title}}</h3>
+      <ul>
+        @for(p of item.list; track $index){
+            <li class="custom-li">{{p}}</li>
+        }
+      </ul>
+      <div class="flex justify-center mt-4">
+        <button >Read More</button>
+      </div>
+    </div>
+ }
+  </div>
+</section>
+
+
+    </div>
+</div>
