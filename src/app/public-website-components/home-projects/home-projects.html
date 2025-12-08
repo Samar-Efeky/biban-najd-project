@@ -1,0 +1,46 @@
+<div class="home-projects padding-y-section" style="background-color: var(--lightColor);">
+    <div class="padding-section" appInView>
+         <div class="title-design  relative px-4 sm:px-6 lg:px-8 py-10">
+            <header class="heading-hero mx-auto max-w-4xl text-center relative z-10 ">
+                <p class="heading-hero__eyebrow font-bold sm:text-[1.3rem] text-[1.1rem]">
+                خدماتنا
+                </p>
+                <h1 class="heading-hero__title font-bold md:text-[2rem] text-[1.5rem]">
+                احدث المشاريع
+                </h1>
+            </header>
+            <div class="heading-hero__background-word absolute inset-0 flex justify-center items-center pointer-events-none z-0">
+                <span class="text-[100px]  sm:text-[140px] font-extrabold  opacity-10 select-none">
+                خدمتنا
+                </span>
+            </div>
+        </div>
+        <div class="projects-area">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 ">
+
+      <!-- ITEM -->
+       @for(item of projects;track item.id){
+            <div class="single-projects-box bg-[#112229] rounded-lg overflow-hidden shadow hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+        <img [src]="item.image" [alt]="item.title" class="w-full h-56 object-cover">
+        <div class="content p-5 flex justify-between items-start">
+          <div class="inner">
+            <h3 class="text-xl font-semibold text-white mb-2">
+              <a routerLink="/blog-details" class="hover:text-gray-300">{{item.title}}</a>
+            </h3>
+            <a  class="category text-sm text-gray-400 hover:text-gray-200">{{item.category}}</a>
+          </div>
+          <div class="date text-sm text-gray-400">
+            <span>{{item.date}}</span>
+          </div>
+        </div>
+      </div>
+       }
+    
+    </div>
+    <div class="flex justify-center mt-5">
+        <button class="text-black font-semibold">المزيد من المشاريع</button>
+    </div>
+</div>
+
+    </div>
+</div>

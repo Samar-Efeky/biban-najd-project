@@ -1,0 +1,61 @@
+<footer>
+  <div class="padding-section padding-y-section">
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-4">
+    <div>
+      <img routerLink="home" src="assets/footer-logo.jpeg" class="w-[250px] cursor-pointer" alt="المقاولات العامة">
+      <p class="pt-3 text-[1.1rem]">انطلقت بيبان نجد برؤية طموحة لتكون أحد الأسماء البارزة في قطاع البناء والتطوير والخدمات، من خلال الالتزام 
+        بالجودة، والدقة في التنفيذ، والإبداع في الحلول المتكاملة التي تلبي احتياجات السوق السعودي المتنامي.</p>
+    </div>
+    <div class="md:text-center">
+      <h2 class="span-color text-lg font-semibold mb-5">روابط سريعة</h2>
+      <ul class="space-y-2 text-sm ">
+        <li><a routerLink="home" (click)="scrollToTop()" class=" transition">الصفحة الرئيسية</a></li>
+        <li><a routerLink="about-us" (click)="scrollToTop()" class=" transition">من نحن</a></li>
+        <li><a routerLink="services" (click)="scrollToTop()" class=" transition">الخدمات</a></li>
+        <li><a routerLink="projects" (click)="scrollToTop()" class=" transition">المشاريع</a></li>
+        <li><a routerLink="contact-us" (click)="scrollToTop()" class=" transition">تواصل معنا</a></li>
+      </ul>
+    </div>
+      <div class="">
+
+      <!-- Item -->
+      <div class="flex items-center  gap-4  pb-4">
+        <a href="tel:0555095507">
+             <div class="w-12 h-12 flex items-center justify-center rounded"
+         style="background-color: var(--primaryColor);">
+          <i class="fa-solid fa-phone-volume text-xl text-white"></i>
+        </div>
+        </a>
+        <div class="text-lg font-semibold  px-4">
+          الهاتف : <a href="tel:0555095507" class=" inline">0555095507</a>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="flex items-center  gap-4  pb-4">
+         <div class="w-12 h-12  flex items-center justify-center rounded"
+         style="background-color: var(--primaryColor);">
+          <i class="fas fa-comment-dots text-xl "></i>
+        </div>
+        <div class="text-lg font-semibold  px-4">
+          بريد إلكتروني :  <a href="mailto:info@bibannajd.com" class=" inline">info@bibannajd.com</a>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="flex items-center  gap-4  pb-4">
+          <div class="w-12 h-12  flex items-center justify-center rounded"
+          style="background-color: var(--primaryColor);">
+          <i class="fas fa-map-marker-alt text-xl "></i>
+        </div>
+        <div class="text-lg font-semibold  px-4">
+          عنوان: شقراء, شارع الاربعين
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-10 border-t border-gray-700 pt-6 pb-0 flex flex-col md:flex-row justify-center items-center text-sm text-gray-400">
+    <p>&copy; Copyright  {{currentYear}}. All rights reserved.</p>
+  </div>
+  </div>
+</footer>

@@ -1,0 +1,11 @@
+ footer{
+ background-color: var(--darkColor);
+ color:rgba(255, 255, 255,0.7);
+  a {
+    font-size: 16px;
+    padding: 1% 0px;
+    &:hover {
+      color: var(--primaryColor);
+    }
+  }
+ }

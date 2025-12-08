@@ -1,0 +1,39 @@
+<div class="home-services margin-y-section ">
+    <div class="padding-section">
+        <div class="title-design  relative px-4 sm:px-6 lg:px-8 py-10">
+            <header class="heading-hero mx-auto max-w-4xl text-center relative z-10 ">
+                <p class="heading-hero__eyebrow font-bold sm:text-[1.3rem] text-[1.1rem]">
+                خدماتنا
+                </p>
+                <h1 class="heading-hero__title font-bold md:text-[2rem] text-[1.5rem]">
+                نقدم مجموعة من الخدمات، منها:
+                </h1>
+            </header>
+            <div class="heading-hero__background-word absolute inset-0 flex justify-center items-center pointer-events-none z-0">
+                <span class="text-[100px]  sm:text-[140px] font-extrabold  opacity-10 select-none">
+                خدمتنا
+                </span>
+            </div>
+        </div>
+    <!-- services Grid -->
+    <div class="flex flex-wrap -mx-4 justify-center">
+      <!-- Single service Box 1 -->
+       @for(item of services; track $index){
+        <div class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-4 ">
+        <div class="single-services-box">
+          <div class="services-image relative overflow-hidden rounded-md transition-transform duration-300 
+            ease-in-out group h-[400px]">
+            <img [src]="item.image" [alt]="item.title"
+                class="rounded-md w-full h-full object-cover transition-transform duration-500
+                ease-in-out group-hover:scale-110 group-hover:rotate-1">
+            <div class="overlay absolute inset-0 bg-[#0d1b2a] opacity-55 transition-opacity duration-300"></div>
+            </div>
+            <div class="flex justify-center text-center mt-3">
+                <h2 class="md:text-[1.4rem] text-[1.2rem]">{{item.title}}</h2>
+            </div>
+        </div>
+      </div>
+       }
+</div>
+    </div>
+</div>

@@ -11,6 +11,8 @@
 --blackColor:black;
 --transition:0.4s;
 --borderColor:rgba(234, 146, 22,0.4);
+--inputColor:#212529;
+--whatsappColor:#25D366;
 }
 *{
     margin: 0;
@@ -284,5 +286,35 @@ button{
                 color:var(--darkColor);
             }
         }
+    }
+}
+.form-control {
+    transition: var(--transition);
+    box-shadow: unset !important;
+    background-color: var(--inputColor);
+    color: var(--whiteColor);
+    border: none !important;
+    padding-left: 15px;
+    font-size: 14.5px;
+    border-radius: 5px;
+    height: 50px;
+  outline: none;
+    &::placeholder {
+        color: #a7a6a6;
+        transition: var(--transition);
+    }
+    &:focus {
+        color: var(--whiteColor);
+        background-color: #0c252b;
+      outline: none;
+        &::placeholder {
+            color: transparent;
+        }
+    }
+}
+textarea {
+    &.form-control {
+        padding-top: 15px;
+        height: 200px;
     }
 }

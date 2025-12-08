@@ -22,7 +22,7 @@ export class HeroSection implements AfterViewInit, OnDestroy {
   slides = [
     {
       image: 'assets/img1.jpg',
-      title: 'ابلج للمقاولات العامة',
+      title: 'بيبان نجد للمقاولات العامة',
       subtitle: 'نبني مستقبلك بأيدٍ محترفة',
       desc: 'تقدم خدمات مقاولات متكاملة بأعلى معايير الجودة لتحقيق تطلعاتكم'
     },
